@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}StudyUp - Mentores{% endblock %}
+
+{% block nav %}
+<li><a href="{{ url_for('index') }}">Início</a></li>
+<li><a href="{{ url_for('vagas') }}">Vagas</a></li>
+{% endblock %}
+
+{% block conteudo %}
+<article>
+    <h2>ENCONTRE O SEU MENTOR</h2>
+    <p>Profissionais prontos para compartilhar conhecimento e experiência</p>
+</article>
+
+{% for m in mentores %}
+<figure>
+    <img src="{{ url_for('static', filename='imagens/' ~ m.foto) }}" alt="{{ m.profissao }}">
+    <figcaption>{{ m.nome }} - {{ m.profissao }}</figcaption>
+</figure>
+{% endfor %}
+{% endblock %}

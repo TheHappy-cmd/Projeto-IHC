@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block nav %}
+<li><a href="{{ url_for('mentores') }}">Mentores</a></li>
+<li><a href="{{ url_for('vagas') }}">Vagas</a></li>
+{% endblock %}
+
+{% block conteudo %}
+<article>
+    <h2>ENCONTRE O CAMINHO PARA SUA CARREIRA</h2>
+    <p>Conecte com profissionais, desenvolva suas habilidades e encontre oportunidades</p>
+</article>
+
+<figure>
+    <img src="{{ url_for('static', filename='imagens/av1.jpg') }}" alt="Estudante">
+    <figcaption>Imagem de uma mulher estudando</figcaption>
+</figure>
+
+<section>
+    <ol>
+        <li>Conheça seu caminho</li>
+        <li>Encontre um mentor</li>
+        <li>Desenvolva habilidades</li>
+        <li>Encontre vagas</li>
+    </ol>
+</section>
+{% endblock %}

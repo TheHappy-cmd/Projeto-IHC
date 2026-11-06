@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}StudyUp{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>StudyUp</h1>
+        {% block cabecalho %}
+        <nav>
+            <ul>
+                {% block nav %}{% endblock %}
+                {% block auth %}
+                {% if session.get('usuario_id') %}
+                <li><a href="{{ url_for('sair') }}">Sair</a></li>
+                {% else %}
+                <li><a href="{{ url_for('login') }}">login</a></li>
+                <li><a href="{{ url_for('cadastro') }}">Cadastre-se</a></li>
+                {% endif %}
+                {% endblock %}
+            </ul>
+        </nav>
+        {% endblock %}
+    </header>
+
+    {% for mensagem in get_flashed_messages() %}
+    <p role="status">{{ mensagem }}</p>
+    {% endfor %}
+
+    {% block conteudo %}{% endblock %}
+
+    {% block rodape %}{% endblock %}
+
+</body>
+</html>

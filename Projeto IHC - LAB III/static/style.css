@@ -1,0 +1,516 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+article {
+  margin: 20px 0;
+}
+
+article h2 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+figure img {
+  max-width: 350px; 
+  height: auto;
+  border-radius: 8px; 
+  
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+
+section ol {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+
+
+figure {
+  display: inline-block;     
+  vertical-align: top;      
+  margin: 15px;             
+  text-align: center;        
+  background-color: #ffffff; 
+  padding: 10px;
+  border: 1px solid #ddd;    
+}
+
+
+figure img {
+  width: 180px;              
+  height: 180px;             
+  object-fit: cover;        
+  display: block;
+  margin: 0 auto 8px auto;  
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #333333;            
+  font-weight: bold;
+}
+
+
+main section {
+  background-color: #ffffff;
+  border: 1px solid #dddddd; 
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+
+main section h3 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+
+main section p {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+
+main section a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+main section a:hover,
+main section a:focus {
+  background-color: #f1c40f;
+  color: #222222;
+}
+button:focus-visible, 
+a:focus-visible {
+    outline: 5px solid #0056b3;
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* BOTÃO CRIAR CONTA */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+article {
+  margin: 20px 0;
+}
+
+article h2 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+figure img {
+  max-width: 350px; 
+  height: auto;
+  border-radius: 8px; 
+  
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+
+section ol {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+
+
+figure {
+  display: inline-block;     
+  vertical-align: top;      
+  margin: 15px;             
+  text-align: center;        
+  background-color: #ffffff; 
+  padding: 10px;
+  border: 1px solid #ddd;    
+}
+
+
+figure img {
+  width: 180px;              
+  height: 180px;             
+  object-fit: cover;        
+  display: block;
+  margin: 0 auto 8px auto;  
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #333333;            
+  font-weight: bold;
+}
+
+
+main section {
+  background-color: #ffffff;
+  border: 1px solid #dddddd; 
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+
+main section h3 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+
+main section p {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+
+main section a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+main section a:not(.btn):hover,
+main section a:not(.btn):focus {
+  background-color: #f1c40f;
+  color: #222222;
+}
+button:focus-visible, 
+a:focus-visible {
+    outline: 5px solid #0056b3;
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* BOTÃO CRIAR CONTA */
+button[type="submit"] {
+    width: 100%;
+    padding: 05px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+/* Parte de inserir email e senha no login*/
+
+.form-login {
+    max-width: 350px;
+}
+
+/* Parte de cadastro de usuário */
+
+.form-cadastro {
+    max-width: 420px;
+    margin: 20px auto 0;
+}
+
+.form-cadastro p {
+    margin-bottom: 16px;
+}
+
+.form-cadastro label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-cadastro input,
+.form-cadastro select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+    background: #fff;
+}
+
+.form-cadastro input:focus,
+.form-cadastro select:focus {
+    outline: none;
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.2);
+}
+
+.form-cadastro button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.form-cadastro select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' fill='none' stroke='%232c3e50' stroke-width='2'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+.erro {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #c0392b;
+}
+
+.links-form {
+    max-width: 420px;
+    margin: 16px auto 0;
+    text-align: center;
+}
+
+
+
+
+/* LINKS ENTRAR E VOLTAR AO INÍCIO */
+article p a,
+article li a {
+    display: inline;
+    margin-top: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+article p a:hover,
+article li a:hover {
+    background-color: transparent;
+    color: #f1c40f;
+}
+
+
+/* Páginas de oportunidades */
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin: 16px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+    display: inline-block;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: #f1c40f;
+    color: #222222;
+}
+
+form label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 16px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+

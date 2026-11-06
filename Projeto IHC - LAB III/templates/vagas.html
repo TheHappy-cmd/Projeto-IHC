@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block nav %}
+<li><a href="{{ url_for('index') }}">Início</a></li>
+<li><a href="{{ url_for('mentores') }}">Mentores</a></li>
+{% endblock %}
+
+{% block conteudo %}
+<main>
+    <article>
+        <h2>ENCONTRE OPORTUNIDADES</h2>
+        <p>Dê o próximo passo na sua carreira.</p>
+    </article>
+
+    <section>
+        <h2>OPORTUNIDADES DE EMPREGOS </h2>
+    </section>
+
+    {% for v in vagas %}
+    <section>
+        <h3>{{ v.titulo }}</h3>
+        <p>Área: {{ v.area }}</p>
+        <p>Modalidade: {{ v.modalidade }}</p>
+        <p>Local: {{ v.local }}</p>
+        <p>{{ v.descricao }}</p>
+        <a href="{{ v.link }}">Ver oportunidade</a>
+    </section>
+    {% endfor %}
+</main>
+{% endblock %}

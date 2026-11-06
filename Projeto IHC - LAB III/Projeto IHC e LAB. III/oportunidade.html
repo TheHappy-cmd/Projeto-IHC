@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidade | StudyUp</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>StudyUp</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="mentores.html">Mentores</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a class="voltar" href="vagas.html">← Voltar para oportunidades</a>
+
+        <article class="card" id="detalhes"></article>
+
+        <section class="card">
+            <h3>Candidate-se</h3>
+            <form id="form-candidatura">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+
+                <label for="mensagem">Fale um pouco sobre você</label>
+                <textarea id="mensagem" rows="4"></textarea>
+
+                <button type="submit" class="btn">Enviar candidatura</button>
+            </form>
+            <p id="sucesso" hidden>✅ Candidatura enviada com sucesso!</p>
+        </section>
+    </main>
+
+    <script>
+        const vagas = {
+            ciberseguranca: {
+                titulo: "Estágio em Cibersegurança",
+                area: "Tecnologia",
+                modalidade: "Híbrido",
+                local: "Maceió - AL",
+                descricao: "Oportunidade para estudantes que desejam aprender sobre segurança de sistemas e redes."
+            },
+            mecanico: {
+                titulo: "Auxiliar de Mecânico",
+                area: "Mecânica Automotiva",
+                modalidade: "Presencial",
+                local: "Maceió - AL",
+                descricao: "Oportunidade para aprender e auxiliar na manutenção, revisão e reparação de veículos."
+            },
+            direito: {
+                titulo: "Estágio em Direito",
+                area: "Direito",
+                modalidade: "Presencial",
+                local: "Maceió - AL",
+                descricao: "Oportunidade para estudantes de Direito acompanharem processos, pesquisas jurídicas e atividades de um escritório."
+            },
+            enfermagem: {
+                titulo: "Estágio em Enfermagem",
+                area: "Saúde",
+                modalidade: "Presencial",
+                local: "Maceió - AL",
+                descricao: "Oportunidade para estudantes desenvolverem conhecimentos práticos e acompanharem profissionais da área da saúde."
+            }
+        };
+
+        const id = new URLSearchParams(location.search).get("id");
+        const vaga = vagas[id];
+        const detalhes = document.getElementById("detalhes");
+
+        if (vaga) {
+            document.title = vaga.titulo + " | StudyUp";
+            detalhes.innerHTML = `
+                <h2>${vaga.titulo}</h2>
+                <p><strong>Área:</strong> ${vaga.area}</p>
+                <p><strong>Modalidade:</strong> ${vaga.modalidade}</p>
+                <p><strong>Local:</strong> ${vaga.local}</p>
+                <p>${vaga.descricao}</p>
+            `;
+        } else {
+            detalhes.innerHTML = "<h2>Vaga não encontrada</h2>";
+            document.getElementById("form-candidatura").hidden = true;
+        }
+
+        document.getElementById("form-candidatura").addEventListener("submit", (e) => {
+            e.preventDefault();
+            e.target.hidden = true;
+            document.getElementById("sucesso").hidden = false;
+        });
+    </script>
+</body>
+</html>
